@@ -14,7 +14,7 @@ Made by Fernando Lima
 - imported classes renamed to be prefixed by JFX to make the code more readable:
   new name of imported classes is JFX{className}
 - all classes are now together in just one file
-- all components at FXML are correctly imported
+- all components at FXML are now correctly imported
 
 # =========================
 #    REQUIREMENTS
