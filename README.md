@@ -27,6 +27,6 @@ Made by Fernando Lima
 #    HOW TO USE
 # =========================
 
-Copy this file to your project folder and import it for your code, using:
+Copy javafxjython.py to your project folder and import it for your code, using:
 
 **import javafxjython**
