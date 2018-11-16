@@ -1,7 +1,7 @@
 # javafx-jython
 Integration between JavaFX and Jython.
 
-Fork of jythonfx (made by Jeremi Biernacki) in one file
+Fork of jythonfx (made by Jeremi Biernacki) in one file  
 Made by Fernando Lima
 
 # =========================
