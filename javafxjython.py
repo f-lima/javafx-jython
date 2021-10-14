@@ -82,7 +82,25 @@ class FXMLLoader(object):
    # start: made by Fernando Lima
    def getInnerComponents(self, component):
       # print("component: " + str(component))
-      if (hasattr(component, "children")):   # component is a JavaFX Pane
+      if (hasattr(component, "columns")):   # component is a JavaFX TableView
+         innerComponents = getattr(component, "columns", [])
+         if isinstance(innerComponents, Iterable):
+            for innerComponent in innerComponents:
+               self.components.append(innerComponent)
+               self.getInnerComponents(innerComponent)
+         else:
+            self.components.append(innerComponents)
+            self.getInnerComponents(innerComponents)
+      if (hasattr(component, "items")):   # component is a JavaFX Menu
+         innerComponents = getattr(component, "items", [])
+         if isinstance(innerComponents, Iterable):
+            for innerComponent in innerComponents:
+               self.components.append(innerComponent)
+               self.getInnerComponents(innerComponent)
+         else:
+            self.components.append(innerComponents)
+            self.getInnerComponents(innerComponents)
+      elif (hasattr(component, "children")):   # component is a JavaFX Pane
          innerComponents = getattr(component, "children", [])
          if isinstance(innerComponents, Iterable):
             for innerComponent in innerComponents:
